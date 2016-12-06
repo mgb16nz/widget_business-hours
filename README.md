@@ -12,5 +12,5 @@ silverstripe/widgets: *
 
 
 ```
-composer require snapwebdesigns/widget_business-hours
+composer require mgb16nz/widget_business-hours
 ```
