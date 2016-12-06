@@ -34,11 +34,23 @@ class BusinessHoursWidget extends Widget
 
             $fields->merge(array(
                 DropdownField::create('BusinessHoursID', _t('BusinessHoursWidget.BusinessHours', 'Business Hours'), BusinessHours::get()->map()),
-                NumericField::create('DaysToShow', _t('BusinessHoursWidget.DaysToShow', 'Days To Show'))
+                NumericField::create('DaysToShow', _t('BusinessHoursWidget.DaysToShow', 'Show working days of the week are open (left blank will show all days of the week)'))
             ));
         });
 
         return parent::getCMSFields();
+    }
+
+    public function getBusinessHours()
+    {
+        $hours = $this->BusinessHours();
+
+        if ($hours) {
+            return $hours->BusinessHours()
+                ->limit($this->DaysToShow);
+        }
+
+        return array();
     }
 
 }
