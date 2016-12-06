@@ -56,5 +56,5 @@ class BusinessHoursWidget extends Widget
 
 class BusinessHoursWidget_Controller extends Widget_Controller
 {
-
+    // nothing yet pushed
 }
