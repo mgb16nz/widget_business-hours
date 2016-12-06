@@ -67,9 +67,9 @@ class BusinessHoursWidget extends Widget
     /**
      * @return DataList
      */
-    public function Hours()
+    public function BusinessHours()
     {
-        return $this->BusinessHours();
+        return BusinessHours::get();
 
     }
 }
