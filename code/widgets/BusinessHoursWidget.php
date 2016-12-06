@@ -52,7 +52,6 @@ class BusinessHoursWidget extends Widget
 
         return array();
     }
-
 }
 
 class BusinessHoursWidget_Controller extends Widget_Controller
