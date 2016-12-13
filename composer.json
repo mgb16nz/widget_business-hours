@@ -2,9 +2,11 @@
   "name": "mgb16nz/widget_business-hours",
   "description": "Widget to displays the business hours in the sidebar using silverstripe/widgets",
   "type": "silverstripe-module",
-  "keywords" : [
+  "keywords": [
     "silverstripe",
-    "widget"],
+    "widget",
+    "business hours"
+  ],
   "require": {
     "silverstripe/framework": ">=3.1",
     "silverstripe/cms": ">=3.1"
@@ -19,7 +21,7 @@
       "email": "mgb16nz@gmail.com"
     }
   ],
-  "extra" : {
+  "extra": {
     "installer-name": "widget_business-hours"
   }
 }
