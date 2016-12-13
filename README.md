@@ -10,6 +10,9 @@ silverstripe/cms: ^3.1
 silverstripe/widgets: *
 ```
 
+### Installation
+
+Install the module through [composer](http://getcomposer.org):
 
 ```
 composer require mgb16nz/widget_business-hours
