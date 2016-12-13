@@ -70,11 +70,14 @@ class BusinessHoursWidget extends Widget
     public function BusinessHours()
     {
         return BusinessHours::get();
-
     }
+
 }
 
 class BusinessHoursWidget_Controller extends Widget_Controller
 {
 
+
+
 }
+

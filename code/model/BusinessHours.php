@@ -2,7 +2,6 @@
 
 class BusinessHours extends DataObject
 {
-
     private static $db = array(
         'WeekDay' => 'Varchar',
         'OpenTime' => 'Time',
@@ -19,6 +18,8 @@ class BusinessHours extends DataObject
         'OpenTime' => 'Start time of Business',
         'CloseTime' => 'Closing time of Business'
     );
+
+    public static $default_sort='SortOrder';
 
     public function getCMSFields() {
 
@@ -39,8 +40,7 @@ class BusinessHours extends DataObject
         $fields->addFieldToTab('Root.Main', TextField::create('CloseTime', 'Hours Close'));
 
         $fields->removeByName('SortOrder');
-//        $fields->removeByName('ParentID');
-
+        $fields->removeByName('ParentID');
 
         return $fields;
     }

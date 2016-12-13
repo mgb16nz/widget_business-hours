@@ -17,7 +17,7 @@ composer require snapwebdesigns/widget_business-hours
 
 ## Screenshots
 
-Frontend display on the sidebar of what the Business Hours Opening and Closing hours of the days of the weeks should look like
+Frontend display on the sidebar of Business Hours Opening and Closing hours of the days of the weeks. Still need to work on when Days not working to say "Closed"
 
 ![Business_Hours] (docs/images/Business_Hours.png)
 
