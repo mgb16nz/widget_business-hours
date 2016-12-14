@@ -4,7 +4,7 @@ class BusinessHours extends DataObject
 {
     private static $db = array(
         'WeekDay' => 'Varchar',
-        'OpenTime' => 'Time',
+        'StartTime' => 'Time',
         'CloseTime' => 'Time',
         'SortOrder' => 'Int'
     );
@@ -15,11 +15,11 @@ class BusinessHours extends DataObject
 
     private static $summary_fields = array(
         'WeekDay' => 'Day of the Week',
-        'OpenTime' => 'Start time of Business',
+        'StartTime' => 'Start time of Business',
         'CloseTime' => 'Closing time of Business'
     );
 
-    public static $default_sort='SortOrder';
+    private static $default_sort='SortOrder';
 
     public function getCMSFields() {
 
@@ -36,14 +36,34 @@ class BusinessHours extends DataObject
                 'Saturday' => 'Saturday'
             ))
             ->setEmptyString('-- Select Day --'));
-        $fields->addFieldToTab('Root.Main', TextField::create('OpenTime', 'Hours Open'));
+        $fields->addFieldToTab('Root.Main', TextField::create('StartTime', 'Hours Start'));
         $fields->addFieldToTab('Root.Main', TextField::create('CloseTime', 'Hours Close'));
+
 
         $fields->removeByName('SortOrder');
         $fields->removeByName('ParentID');
 
         return $fields;
     }
+
+    public function getTime($start = null, $close = null) {
+        if($start) {
+            if (date('i', strtotime($start)) != 00) {
+                $start = date('g:ia', strtotime($start));
+            } else {
+                $start = date('ga', strtotime($start));
+            }
+            if (date('i', strtotime($close)) != 00) {
+                $close = date('g:ia', strtotime($close));
+            } else {
+                $close = date('ga', strtotime($close));
+            }
+            return $start . ' till ' . $close;
+        } else {
+            return 'Closed';
+        }
+    }
+
 
 
 }

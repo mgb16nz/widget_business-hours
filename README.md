@@ -10,7 +10,7 @@ silverstripe/cms: ^3.1
 silverstripe/widgets: *
 ```
 
-### Installation
+## Installation
 
 Install the module through [composer](http://getcomposer.org):
 
@@ -20,7 +20,7 @@ composer require mgb16nz/widget_business-hours
 
 ## Screenshots
 
-Frontend display on the sidebar of Business Hours Opening and Closing hours of the days of the weeks. Still need to work on when Days not working to say "Closed"
+Frontend display on the sidebar of Business Start and Closing hours of the days of the weeks.
 
 ![Business_Hours] (docs/images/Business_Hours.png)
 
