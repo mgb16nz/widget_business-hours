@@ -24,13 +24,9 @@ composer require mgb16nz/widget_business-hours
 
 <img width="277" height="235" alt="Business_Hours" src="https://github.com/user-attachments/assets/84a9cb9d-bcee-4430-9e67-a9e20846b2b9" />
 
-
-
 **How it looks like when added to widget on the page you wish to display**
 
 <img width="947" height="252" alt="Widget" src="https://github.com/user-attachments/assets/dd7290f4-9fed-4429-9420-0713c45ffa39" />
-
-<br>
 
 **How it looks in the ModelAdmin site tree called Business Hours**
 
